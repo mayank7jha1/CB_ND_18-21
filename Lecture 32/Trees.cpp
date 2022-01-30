@@ -117,8 +117,8 @@ int diameter(node *root) {//O(n^2)
 
 	int option1 = diameter(root->left);
 	int option2 = diameter(root->right);
-	int option3 = height(root - left) + height(root->right);
-	return max(option1, option2, option3);
+	int option3 = height(root->left) + height(root->right);
+	return max(option1,max(option2, option3));
 }
 
 int main() {
